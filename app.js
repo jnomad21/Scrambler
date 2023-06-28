@@ -7,7 +7,11 @@ const scramBtn = document.querySelector('#word-button')
 const mixedWord = document.querySelector('#scrambled-word')
 const guessWord = document.querySelector('#guess')
 const submitBtn =document.querySelector('#submit')
-const message =document.querySelector('#message')
+
+const displayMessage=function(message){
+    document.querySelector('.message').textContent = message
+
+}
 
 const shuffle = function(){
     for (let i=0; i<newWord.length; i++){
@@ -28,7 +32,9 @@ mixedWord.textContent=shuffle()
 
 submitBtn.addEventListener('click', function(){
     if(guessWord.value===randWord){
-        message.classList.remove('you-win')
+        displayMessage("YOU GOT IT😎")
+    }else{
+        displayMessage("BETTER LUCK NEXT TIME, DUMB DUMB😭")
     }
 })
 

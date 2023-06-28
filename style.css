@@ -1,3 +1,6 @@
-.you-win{
+.you-win {
+    display: none;
+}
+.you-lose {
     display: none;
 }
