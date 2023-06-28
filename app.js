@@ -3,6 +3,8 @@
 const words =['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula']
 const randWord = words[Math.floor(Math.random()*words.length)]
 const newWord = Array.from(randWord)
+const scramBtn = document.querySelector('#word-button')
+const mixedWord = document.querySelector('#scrambled-word')
 
 const shuffle = function(){
     for (let i=0; i<newWord.length; i++){
@@ -14,7 +16,12 @@ const shuffle = function(){
         return scramWord
     }
 }
-console.log(shuffle())
+
     
+scramBtn.addEventListener('click', function(){
+shuffle
+mixedWord.textContent=shuffle()
+})
+
 
  
