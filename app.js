@@ -1,8 +1,7 @@
 'use strict';
 
 const words =['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula', 'hippopotomus', 'armadillo', 'aardvark', 'kangaroo']
-const randWord = words[Math.floor(Math.random()*words.length)]
-const newWord = Array.from(randWord)
+
 const scramBtn = document.querySelector('#word-button')
 const mixedWord = document.querySelector('#scrambled-word')
 const guessWord = document.querySelector('#guess')
