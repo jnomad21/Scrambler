@@ -14,7 +14,6 @@ const word=function(){
     return wor
 }
 const newWord=word()
-console.log(newWord)
 
 const randWord = function(){
     const mixedWord = Array.from(newWord)
@@ -28,12 +27,6 @@ const randWord = function(){
         return scramWord
     }
 }
-
-scramBtn.addEventListener('click', function(){
-randWord()
-mixedWord.textContent=randWord()
-})
-
 const submitResponse = function(){
     if(guessWord.value===newWord){
         displayMessage("YOU GOT IT😎")
@@ -41,6 +34,11 @@ const submitResponse = function(){
         displayMessage("BETTER LUCK NEXT TIME, DUMB DUMB😭")
     }
 }
+// event listeners
+scramBtn.addEventListener('click', function(){
+randWord()
+mixedWord.textContent=randWord()
+})
 
 submitBtn.addEventListener('click', function(){
     submitResponse()
