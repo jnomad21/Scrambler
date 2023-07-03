@@ -35,6 +35,11 @@ const submitResponse = function(){
     }
 }
 // event listeners
+window.addEventListener('load', function(){
+    randWord()
+    mixedWord.textContent=randWord() 
+})
+
 scramBtn.addEventListener('click', function(){
 randWord()
 mixedWord.textContent=randWord()
