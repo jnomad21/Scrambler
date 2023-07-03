@@ -24,6 +24,7 @@ const randWord = function(){
         mixedWord[i]=mixedWord[r]
         mixedWord[r]=temp
         const scramWord = mixedWord.join("")
+        if(scramWord !== newWord)
         return scramWord
     }
 }
