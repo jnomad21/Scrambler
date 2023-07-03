@@ -33,13 +33,22 @@ randWord()
 mixedWord.textContent=randWord()
 })
 
-submitBtn.addEventListener('click', function(){
+const submitResponse = function(){
     if(guessWord.value===newWord){
         displayMessage("YOU GOT IT😎")
     }else{
         displayMessage("BETTER LUCK NEXT TIME, DUMB DUMB😭")
     }
+}
+
+submitBtn.addEventListener('click', function(){
+    submitResponse()
 })
 
+guessWord.addEventListener('keypress', function(e){
+    if (e.keyCode === 13) {
+    submitResponse()
+}
+})
 
  
