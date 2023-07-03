@@ -1,4 +1,7 @@
+
+
 body{
+    box-sizing: border-box;
     text-align: center;
     
 }
@@ -11,10 +14,11 @@ body{
     width: 20vw;
     height: 4vh;
     position: relative;
-    justify-content: center;
     padding-top: 10px;
 }
 .scrambled-word{
+    position: relative;
     display: grid;
     justify-content: center;
+    bottom: 10px;
 }
