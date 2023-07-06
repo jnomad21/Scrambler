@@ -46,7 +46,7 @@ const submitResponse = function () {
     console.log(words)
     newWord = word()
   } else {
-    displayMessage('BETTER LUCK NEXT TIME, DUMB DUMB😭');
+    displayMessage('KEEP GUESSING, DUMB-DUMB😭');
   }
 };
 
