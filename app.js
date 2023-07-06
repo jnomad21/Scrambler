@@ -33,6 +33,7 @@ let newWord = word();
 const submitResponse = function () {
   if (guessWord.value === newWord) {
     displayMessage('YOU GOT IT😎');
+    guessWord.value = ""
   } else {
     displayMessage('BETTER LUCK NEXT TIME, DUMB DUMB😭');
   }
