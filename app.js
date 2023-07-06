@@ -28,12 +28,14 @@ const word = function () {
 };
 
 let newWord = word();
+console.log(newWord)
 
 
 const submitResponse = function () {
   if (guessWord.value === newWord) {
     displayMessage('YOU GOT IT😎');
     guessWord.value = ""
+    newWord = word()
   } else {
     displayMessage('BETTER LUCK NEXT TIME, DUMB DUMB😭');
   }
