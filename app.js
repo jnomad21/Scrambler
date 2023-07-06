@@ -8,10 +8,23 @@ const mixedWord = document.querySelector('#scrambled-word');
 const guessWord = document.querySelector('#guess');
 const submitBtn = document.querySelector('#submit');
 const scoreCounter = document.querySelector('#score')
+const timer = document.getElementById('timer');
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
+
+
+let timerInterval;
+
+startTimer = () => {
+    clearInterval(timerInterval);
+    let second = 0;
+    timerInterval = setInterval(function () {
+        timer.innerHTML = (second < 10 ? '0' + second : second);
+        second++;
+}, 1000)
+}
 
 function randWord(jumbleWord) {
   for (let i = 0; i < jumbleWord.length; i++) {
@@ -54,6 +67,7 @@ const submitResponse = function () {
 
 window.addEventListener('load', function () {
   newWord = word();
+  startTimer()
 });
 
 scramBtn.addEventListener('click', function () {
