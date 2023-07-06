@@ -1,5 +1,6 @@
-const words = ['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula', 'hippopotomus', 'armadillo', 'aardvark', 'kangaroo', 'hedgehog', 'elephant', 'albatross', 'orangutan', 'rhinoceros', 'chimpanzee'];
-
+let oldWords = new Set(['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula', 'hippopotomus', 'armadillo', 'aardvark', 'kangaroo', 'hedgehog', 'elephant', 'albatross', 'orangutan', 'rhinoceros', 'chimpanzee']);
+let words = [...new Set(oldWords)]
+console.log(words)
 const scramBtn = document.querySelector('#word-button');
 const mixedWord = document.querySelector('#scrambled-word');
 const guessWord = document.querySelector('#guess');
@@ -40,6 +41,9 @@ const submitResponse = function () {
     guessWord.value = ""
     score++
     scoreCounter.textContent = score
+    oldWords.delete(newWord)
+    words = [...new Set(oldWords)]
+    console.log(words)
     newWord = word()
   } else {
     displayMessage('BETTER LUCK NEXT TIME, DUMB DUMB😭');
