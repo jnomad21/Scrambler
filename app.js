@@ -22,12 +22,10 @@ let timerInterval;
 startTimer = () => {
     clearInterval(timerInterval);
     let second = 0;
-    console.log(second)
-    
     timerInterval = setInterval(function () {
         timer.innerHTML = (second < 10 ? '0' + second : second);
         second++;
-        if (second > 5){
+        if (second > 10){
           gameOver()
         }
 }, 1000)  
@@ -65,7 +63,6 @@ const submitResponse = function () {
     scoreCounter.textContent = score
     oldWords.delete(newWord)
     words = [...new Set(oldWords)]
-    console.log(words)
     newWord = word()
   } else {
     displayMessage('KEEP GUESSING, DUMB-DUMB😭');
@@ -73,7 +70,8 @@ const submitResponse = function () {
 };
 
 function gameOver(){
-    console.log("game over")
+    score = 0
+    scoreCounter.textContent = score
 }
 
 
