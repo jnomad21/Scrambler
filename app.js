@@ -4,6 +4,7 @@ const scramBtn = document.querySelector('#word-button');
 const mixedWord = document.querySelector('#scrambled-word');
 const guessWord = document.querySelector('#guess');
 const submitBtn = document.querySelector('#submit');
+const scoreCounter = document.querySelector('#score')
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -30,11 +31,15 @@ const word = function () {
 let newWord = word();
 console.log(newWord)
 
+let score =0
+scoreCounter.textContent = score
 
 const submitResponse = function () {
   if (guessWord.value === newWord) {
     displayMessage('YOU GOT IT😎');
     guessWord.value = ""
+    score++
+    scoreCounter.textContent = score
     newWord = word()
   } else {
     displayMessage('BETTER LUCK NEXT TIME, DUMB DUMB😭');
