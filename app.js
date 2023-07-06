@@ -17,13 +17,20 @@ const displayMessage = function (message) {
 
 let timerInterval;
 
+
+
 startTimer = () => {
     clearInterval(timerInterval);
     let second = 0;
+    console.log(second)
+    
     timerInterval = setInterval(function () {
         timer.innerHTML = (second < 10 ? '0' + second : second);
         second++;
-}, 1000)
+        if (second > 5){
+          gameOver()
+        }
+}, 1000)  
 }
 
 function randWord(jumbleWord) {
@@ -64,6 +71,11 @@ const submitResponse = function () {
     displayMessage('KEEP GUESSING, DUMB-DUMB😭');
   }
 };
+
+function gameOver(){
+    console.log("game over")
+}
+
 
 window.addEventListener('load', function () {
   newWord = word();
