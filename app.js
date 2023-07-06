@@ -1,6 +1,6 @@
 let oldWords = new Set(['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula', 'hippopotomus', 
 'armadillo', 'aardvark', 'kangaroo', 'hedgehog', 'elephant', 'albatross', 'orangutan', 'rhinoceros', 'chimpanzee',
-'platypus', 'ostrich', 'barracuda']);
+'platypus', 'ostrich', 'barracuda', 'salamander', 'anteater']);
 let words = [...new Set(oldWords)]
 console.log(words)
 const scramBtn = document.querySelector('#word-button');
