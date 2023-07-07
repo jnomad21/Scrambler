@@ -24,4 +24,5 @@ body{
 }
 .game-over{
     color: red;
+    display: none;
 }

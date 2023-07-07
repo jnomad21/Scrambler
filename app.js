@@ -9,6 +9,7 @@ const guessWord = document.querySelector('#guess');
 const submitBtn = document.querySelector('#submit');
 const scoreCounter = document.querySelector('#score')
 const timer = document.getElementById('timer');
+const overMessage = document.querySelector(".game-over")
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -72,6 +73,7 @@ const submitResponse = function () {
 function gameOver(){
     score = 0
     scoreCounter.textContent = score
+    overMessage.style.display ="block"
 }
 
 
