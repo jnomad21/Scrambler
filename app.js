@@ -18,8 +18,6 @@ const displayMessage = function (message) {
 
 let timerInterval;
 
-
-
 startTimer = () => {
     clearInterval(timerInterval);
     let second = 0;
@@ -28,6 +26,7 @@ startTimer = () => {
         second++;
         if (second > 10){
           gameOver()
+          second = 0
         }
 }, 1000)  
 }
@@ -72,6 +71,7 @@ const submitResponse = function () {
 
 function gameOver(){
     score = 0
+    second = 0
     scoreCounter.textContent = score
     overMessage.style.display ="block"
 }
