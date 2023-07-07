@@ -15,7 +15,6 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-
 let timerInterval;
 
 startTimer = () => {
@@ -26,6 +25,7 @@ startTimer = () => {
         second++;
         if (second > 10){
           gameOver()
+          clearInterval(timerInterval);
           second = 0
         }
 }, 1000)  
@@ -76,6 +76,9 @@ function gameOver(){
     overMessage.style.display ="block"
 }
 
+function reset(){
+  
+}
 
 window.addEventListener('load', function () {
   newWord = word();
