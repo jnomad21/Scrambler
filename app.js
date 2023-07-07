@@ -29,6 +29,9 @@ startTimer = () => {
           clearInterval(timerInterval);
           second = 0
         }
+        if (second >5){
+          timer.style.color='red'
+        }
 }, 1000)  
 }
 
