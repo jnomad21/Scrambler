@@ -10,6 +10,7 @@ const submitBtn = document.querySelector('#submit');
 const scoreCounter = document.querySelector('#score')
 const timer = document.getElementById('timer');
 const overMessage = document.querySelector(".game-over")
+const resetBtn = document.querySelector('#reset-btn')
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -77,7 +78,9 @@ function gameOver(){
 }
 
 function reset(){
-  
+  overMessage.style.display ="none";
+  startTimer()
+
 }
 
 window.addEventListener('load', function () {
@@ -98,3 +101,7 @@ guessWord.addEventListener('keypress', function (e) {
     submitResponse();
   }
 });
+
+resetBtn.addEventListener('click', function () {
+  reset()
+})
