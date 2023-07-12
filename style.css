@@ -3,6 +3,7 @@
 body{
     box-sizing: border-box;
     text-align: center;
+    background-color: blue;
 
 }
 .message{
