@@ -3,7 +3,7 @@
 body{
     box-sizing: border-box;
     text-align: center;
-    
+
 }
 .message{
     color: green;
@@ -28,6 +28,6 @@ body{
     font-size: 180px;
     position: absolute;
     z-index: 10;
-    top: 20px;
+    top: 21px;
     left: 15vw;
 }
