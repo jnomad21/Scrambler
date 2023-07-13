@@ -1,34 +1,42 @@
-
-
 body{
     box-sizing: border-box;
     text-align: center;
-    background-color: blue;
-
 }
+
+h1{
+    font-size: 5rem;
+    margin-top: 5rem;
+}
+
 .message{
     color: green;
 }
+
 #scrambled-word{
     display: grid;
     background-color: rgb(196, 193, 193);
-    width: 20vw;
-    height: 4vh;
+    border: 1px solid black;
     position: relative;
-    padding-top: 10px;
+    padding: 10px 20px;
 }
+
 .scrambled-word{
     position: relative;
     display: grid;
     justify-content: center;
     bottom: 10px;
 }
+
 .game-over{
     color: red;
     display: none;
     font-size: 180px;
     position: absolute;
     z-index: 10;
-    top: 21px;
+    top: 20px;
     left: 15vw;
+}
+
+.input-group{
+    justify-content: center;
 }
