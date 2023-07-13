@@ -1,6 +1,6 @@
 let oldWords = new Set(['crocodile', 'alligator', 'giraffe', 'octopus', 'tarantula', 'hippopotomus', 
 'armadillo', 'aardvark', 'kangaroo', 'hedgehog', 'elephant', 'albatross', 'orangutan', 'rhinoceros', 'chimpanzee',
-'platypus', 'ostrich', 'barracuda', 'salamander', 'anteater']);
+'platypus', 'ostrich', 'barracuda', 'salamander', 'anteater', ]);
 let words = [...new Set(oldWords)]
 
 const scramBtn = document.querySelector('#word-button');
@@ -20,16 +20,16 @@ let timerInterval;
 
 startTimer = () => {
     clearInterval(timerInterval);
-    let second = 0;
+    let second = 30;
     timerInterval = setInterval(function () {
         timer.innerHTML = (second < 10 ? '0' + second : second);
-        second++;
-        if (second > 10){
+        second--;
+        if (second === 0){
           gameOver()
           clearInterval(timerInterval);
-          second = 0
+          second = 30
         }
-        if (second >5){
+        if (second <10){
           timer.style.color='red'
         }
 }, 1000)  
@@ -75,7 +75,7 @@ const submitResponse = function () {
 
 function gameOver(){
     score = 0
-    second = 0
+    second = 30
     scoreCounter.textContent = score
     overMessage.style.display ="block"
 }
